@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
+      .note { color: grey; font-size: 0.8em; font-weight: bold; }
       .valid-text { color: green; border-color: green; }
       .invalid-text { color: red; border-color: red; }
       .valid-border { border-color: green; }
@@ -19,7 +20,7 @@
       <div class="form-group">
         <!-- An empty entry is not counted as valid lunch food -->
         <input id="lunch-menu" type="text"
-          placeholder="list comma separated dishes you usually have for lunch"
+          placeholder="list comma separated dishes you usually have for lunch (empty entries are not counted)"
           class="form-control" ng-model="lunchMenu" ng-class="checkBorderClass">
       </div>
       <div class="form-group">
