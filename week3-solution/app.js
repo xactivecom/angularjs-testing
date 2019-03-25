@@ -16,6 +16,11 @@ function NarrowItDownController(MenuSearchService) {
 
   // Delegate menu search to service
   menuCtrl.search = function() {
+    // Check for no input
+    if (menuCtrl.searchTerm === "") {
+      return;
+    }
+
     var promise = MenuSearchService.getMatchedMenuItems(menuCtrl.searchTerm);
     promise.then(function(response) {
       menuCtrl.found = response;
@@ -39,16 +44,17 @@ function MenuSearchService($http, MenuServiceBasePath) {
 
   // Get the menu items that match the search criteria
   service.getMatchedMenuItems = function(searchTerm) {
-    var promise = $http({
+    var searchTerm = searchTerm.toLowerCase();
+    return $http({
       method: 'GET',
       url: `${MenuServiceBasePath}/menu_items.json`
-    });
-    return promise.then(result => {
+    })
+    .then(result => {
       var foundItems = [];
       if (result.data) {
         var menuItems = result.data.menu_items;
         foundItems = menuItems.filter(item => {
-          return (item.description.indexOf(searchTerm) !== -1);
+          return (item.description.toLowerCase().indexOf(searchTerm) !== -1);
         }, []);
       }
       else {
