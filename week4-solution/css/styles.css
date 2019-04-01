@@ -1,0 +1,63 @@
+/* General */
+body {
+  font-size: 16px;
+  font-family: 'Oxygen', sans-serif;
+}
+#page-container {
+  position: relative;
+  min-height: 200vh;
+}
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+#header {
+  padding-top: 4px;
+  height: 12vh;
+  width: 100%;
+  background-color: #e9e9e9;
+}
+#footer {
+  padding-top: 4px;
+  height: 12vh;
+  width: 100%;
+  background-color: #eee;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/* Breadcrumb */
+.active {
+  font-weight: bolder;
+}
+
+/* Home page */
+a.menu-select {
+  color: #676767;
+  text-decoration: none;
+}
+a.menu-select:hover {
+  font-weight: bolder;
+}
+
+/* Category item page */
+.menu-name {
+  float: left;
+  font-weight: bolder;
+  margin-top: 0;
+}
+.menu-price {
+  float: right;
+  margin-top: 0;
+  padding-top: 0;
+}
+.menu-description {
+  clear: left;
+  font-size: 14px;
+  color: #676767;
+  margin-bottom: 0;
+}
+.clear-float {
+  clear: left;
+}

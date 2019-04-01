@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-10 col-md-8">
+    <div ng-repeat="item in $ctrl.items">
+      <div class="thumbnail">
+	    <div class="caption">
+	      <h4 class="menu-price">{{ item.price_large | currency }}</h4>
+          <h4 class="menu-name">{{ item.name }}</h4>
+          <p class="menu-description">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="clear-float"></div>
+  </div>
+</div>

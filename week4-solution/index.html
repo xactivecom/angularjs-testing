@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Menu Navigator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body ng-app="MenuApp">
+  <div id="page-container">
+    <div id="content-wrap">
+      <!-- Page content placeholder -->
+      <ui-view></ui-view>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+      <h6 class="text-center">&copy; Copyright 2019 Our Restaurant</h6>
+    </div>
+  </div>
+
+  <!-- Frameworks -->
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+
+  <!-- Modules -->
+  <script src="src/menuapp.module.js"></script>
+  <script src="src/data.module.js"></script>
+
+  <!-- Routes -->
+  <script src="src/routes.js"></script>
+
+  <!-- Module dependencies -->
+  <script src="src/categories.controller.js"></script>
+  <script src="src/categories.component.js"></script>
+  <script src="src/items.controller.js"></script>
+  <script src="src/items.component.js"></script>
+  <script src="src/menudata.service.js"></script>
+
+</body>
+</html>

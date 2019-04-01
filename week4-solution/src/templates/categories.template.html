@@ -1,0 +1,4 @@
+<h3>Select one of the categories:</h3>
+<div ng-repeat="category in $ctrl.categories">
+  <h4><a class="menu-select" ui-sref="items({ category: category.short_name })">{{ category.name }}</a></h4>
+</div>

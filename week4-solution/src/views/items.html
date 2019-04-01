@@ -1,0 +1,9 @@
+<ol class="breadcrumb">
+  <li ui-sref="home"><a>Home</a></li>
+  <li ui-sref="categories"><a>Categories</a></li>
+  <li ui-sref="items" ui-sref-active="active">Items</li>
+<ol>
+
+<h1>Menu choices for {{ menuItems.categoryName }}</h1>
+
+<items-component items="menuItems.items"></items-component>
