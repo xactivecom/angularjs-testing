@@ -37,7 +37,7 @@
           <img class="card-img-top" ng-src="{{myInfoCtrl.apiPath}}/images/{{myInfoCtrl.userPrefs.favoriteDish}}.jpg"
             alt="{{myInfoCtrl.userPrefs.favoriteDishDetails.name}}" />
           <div class="card-body">
-            <h5 class="card-title">{{myInfoCtrl.userPrefs.favoriteDishDetail.name}}</h5>
+            <h4 class="card-title">{{myInfoCtrl.userPrefs.favoriteDishDetail.name}}</h4>
             <p class="card-text">{{myInfoCtrl.userPrefs.favoriteDishDetail.description}}</p>
           </div>
         </div>
@@ -47,8 +47,8 @@
 
     <!-- Warn user to sign up -->
     <div ng-hide="myInfoCtrl.isSignedUp">
-      <h3>Not Signed Up Yet.</h3>
-      <a ui-sref="public.signup"><u>Sign up now!</u></a>
+      <br />
+      <h4>Not Signed Up Yet.&nbsp;&nbsp;&nbsp;<a ui-sref="public.signup"><u>Sign up now!</u></a></h4>
     </div>
   </div>
 </div>
