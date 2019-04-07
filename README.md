@@ -13,3 +13,6 @@ Search menu items application: https://xactivecom.github.io/angularjs-testing/we
 
 ## Week 4 - Restaurant Menu
 Restaurant menu application: https://xactivecom.github.io/angularjs-testing/week4-solution
+
+## Week 5 - Sign Up Application
+Sing Up application: https://xactivecom.github.io/angularjs-testing/week5-solution
