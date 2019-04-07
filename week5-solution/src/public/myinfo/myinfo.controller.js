@@ -16,7 +16,7 @@ function MyInfoController (MenuService, ApiPath) {
 
   // Get user preferences, and determine if signed up 
   ctrl.userPrefs = MenuService.getUserPrefs();
-  console.log(`check ${JSON.stringify(ctrl.userPrefs)}`)
+  //console.log(`check ${JSON.stringify(ctrl.userPrefs)}`)
   ctrl.isSignedUp = (ctrl.userPrefs && ctrl.userPrefs.favoriteDish);
 }
 
