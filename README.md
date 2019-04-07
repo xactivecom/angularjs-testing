@@ -15,4 +15,4 @@ Search menu items application: https://xactivecom.github.io/angularjs-testing/we
 Restaurant menu application: https://xactivecom.github.io/angularjs-testing/week4-solution
 
 ## Week 5 - Sign Up Application
-Sing Up application: https://xactivecom.github.io/angularjs-testing/week5-solution
+Sign Up application: https://xactivecom.github.io/angularjs-testing/week5-solution
