@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <h3>Please enter your account settings</h3>
+
+    <!-- User sign up form -->
+    <form name="form" ng-submit="signUpCtrl.signUp(form)" novalidate>
+
+      <ul class="name-value">
+        <li>
+          <label for="firstName">First Name :</label>
+          <input type="text" name="firstName" ng-model="signUpCtrl.userPrefs.firstName" required />
+          <span ng-if="form.firstName.$error.required && !form.firstName.$pristine">
+            <<&nbsp;<i>First Name is required</i>
+          </span>
+        </li>
+        <li>
+          <label for="lastName">Last Name :</label>
+          <input type="text" name="lastName" ng-model="signUpCtrl.userPrefs.lastName" required />
+          <span ng-if="form.lastName.$error.required && !form.lastName.$pristine">
+            <<&nbsp;<i>Last Name is required</i>
+          </span>
+        </li>
+        <li>
+          <label for="email">Email :</label>
+          <input type="email" name="email" ng-model="signUpCtrl.userPrefs.email" required />
+          <span ng-if="form.email.$error.required && !form.email.$pristine">
+            <<&nbsp;<i>Email is required</i>
+          </span>
+          <span ng-if="form.email.$error.email">
+            <<&nbsp;<i>Email format is expected (name@domain)</i>
+          </span>
+        </li>
+        <li>
+          <label for="phone">Phone :</label>
+          <input type="text" name="phone" ng-model="signUpCtrl.userPrefs.phone" ng-minlength="10" ng-maxlength="10" required />
+          <span ng-if="form.phone.$error.required && !form.phone.$pristine">
+            <<&nbsp;<i>Phone is required</i>
+          </span>
+          <span ng-if="form.phone.$error.minlength || form.phone.$error.maxlength">
+            <<&nbsp;<i>Phone format is expected (10 digits)</i>
+          </span>
+        </li>
+        <li>
+          <label for="favoriteDish">Favorite Dish :</label>
+          <input type="text" name="favoriteDish" ng-model="signUpCtrl.userPrefs.favoriteDish" />
+          <span ng-show="signUpCtrl.isShowError">
+            <<&nbsp;<i>No such menu number exists</i>
+          </span>
+        </li>
+      </ul>
+
+      <input type="submit" ng-disabled="form.$invalid" class="btn btn-success" value="Save Settings"/>
+      <span class="text-success" ng-show="signUpCtrl.isShowMessage">&nbsp;&nbsp;<b>Your information has been saved</b></span>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <h3>Account settings</h3>
+
+    <!-- User preferences -->
+    <div ng-show="myInfoCtrl.isSignedUp">
+
+      <!-- User info -->
+      <div class="col-md-6">
+        <ul class="name-value">
+          <li>
+            <label for="firstName">First Name :</label>
+          	<span name="firstName">{{myInfoCtrl.userPrefs.firstName}}</span>
+          </li>
+          <li>
+          	<label for="lastName">Last Name :</label>
+          	<span name="lastName">{{myInfoCtrl.userPrefs.lastName}}</span>
+        	</li>
+          <li>
+          	<label for="email">Email :</label>
+          	<span name="email">{{myInfoCtrl.userPrefs.email}}</span>
+        	</li>
+          <li>
+          	<label for="phone">Phone :</label>
+          	<span name="phone">{{myInfoCtrl.userPrefs.phone}}</span>
+        	</li>
+          <li>
+          	<label for="favoriteDish">Favorite Dish :</label>
+          	<span name="favoriteDish">{{myInfoCtrl.userPrefs.favoriteDishDetail.name}}</span>
+        	</li>
+        </ul>
+      </div>
+
+      <!-- Favorite dish -->
+      <div class="col-md-6">
+        <div class="card" style="width: 20rem; border-color: #f6b319">
+          <img class="card-img-top" ng-src="{{myInfoCtrl.apiPath}}/images/{{myInfoCtrl.userPrefs.favoriteDish}}.jpg"
+            alt="{{myInfoCtrl.userPrefs.favoriteDishDetails.name}}" />
+          <div class="card-body">
+            <h5 class="card-title">{{myInfoCtrl.userPrefs.favoriteDishDetail.name}}</h5>
+            <p class="card-text">{{myInfoCtrl.userPrefs.favoriteDishDetail.description}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Warn user to sign up -->
+    <div ng-hide="myInfoCtrl.isSignedUp">
+      <h3>Not Signed Up Yet.</h3>
+      <a ui-sref="public.signup"><u>Sign up now!</u></a>
+    </div>
+  </div>
+</div>
